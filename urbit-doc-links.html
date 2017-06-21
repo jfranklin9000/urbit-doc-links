@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 10px;
+}
+
+a {
+  display: inline-block;
+  padding-left: 10px;
+  color: black;
+  font-family: monospace;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  bottom: 80px;                                         /* see .content:top */
+  left: 0;
+  right: 0;
+  background: lightgray;
+}
+
+.content {
+  position: absolute;
+  top: 80px;                                            /* see .header:bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+}
+
+.content iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function github(url)
+{
+  if (github.tab && !github.tab.closed)
+    github.tab.location = url;
+  else
+    github.tab = window.open(url);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+
+  <p>GitHub links open in a (shared) tab.  Other links open in the iframe below.</p>
+
+  <a target="contents" href="http://urbit.org/docs/hoon/reference/">twigs 1</a>
+
+  <a target="contents" href="http://urbit.org/docs/hoon/twig/">twigs 2</a>
+
+  <a href="javascript:github('https://github.com/Fang-/Urbit-By-Doing')">Urbit By Doing</a>
+
+  <a href="javascript:github('https://github.com/Fang-/talkbot')">talkbot code</a>
+
+  <a href="javascript:github('https://github.com/Fang-/urbit-string')">urbit-string code</a>
+
+  <a target="contents" href="http://urbit.org/fora/posts/~2017.4.12..21.14.00..fe17~/">:feed fora</a>
+
+  <a href="javascript:github('https://github.com/keatondunsford/feed')">:feed code</a>
+
+</div>
+
+<div class="content">
+
+  <iframe name="contents"></iframe>
+
+</div>
+
+</body>
+
+</html>
